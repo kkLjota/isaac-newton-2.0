@@ -15,11 +15,11 @@ const Search = () => {
     setError("");
 
     if (!query) return;
-    
+
     try {
       setLoading(true);
       const URL = "http://localhost:4000/search";
-    
+
       const res = await axios.get(URL, {
         params:{
           query:query
@@ -39,12 +39,12 @@ const Search = () => {
     <div className="App">
       <div className="title">
         <h1>Noodle</h1>
-        <img src={Noodle} alt="Miojao" /> 
+        <img src={Noodle} alt="Miojo" /> 
       </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Digite sua buscaaaa:"
+          placeholder="Digite sua busca:"
           onChange={(e) => setQuery(e.target.value)} 
         />
         <button type="submit">Buscar</button>
